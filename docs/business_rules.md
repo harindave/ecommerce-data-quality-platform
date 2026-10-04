@@ -8,7 +8,7 @@ Each rule has an ID so it can be traced in test cases and a traceability matrix.
 | BR-ORD-02 | Every order references an existing customer_id |
 | BR-ORD-03 | Date chain: purchase_timestamp <= approved_at <= delivered_carrier_date <= delivered_customer_date (where present) |
 | BR-ORD-04 | estimated_delivery_date is after purchase_timestamp |
-| BR-ORD-05 | order_status matches filled dates (e.g. "delivered" must have delivered_customer_date; "canceled" must not) |
+| BR-ORD-05 | order_status matches filled dates (e.g. "delivered" must have delivered_customer_date; "canceled" must not). Known exceptions in clean Olist: 8 delivered orders without a delivery date and 6 canceled orders with one (see olist_profile.md).|
 | BR-ORD-06 | order_status is one of the allowed values (created, approved, invoiced, shipped, delivered, canceled, unavailable, processing) |
 | BR-ORD-07 | Delivery delay (days) = delivered_customer_date - estimated_delivery_date, calculated correctly |
  

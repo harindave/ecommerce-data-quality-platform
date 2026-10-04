@@ -1,0 +1,1 @@
+Defects the injector will create. To be filled after profiling all tables.
